@@ -1,0 +1,17 @@
+machine:
+  network:
+    hostname: talos-worker1
+    nameservers:
+      - 1.1.1.1
+    interfaces:
+      - interface: eth0
+        addresses:
+          - 10.10.20.201/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 10.10.20.1
+  time:
+    servers:
+      - time.cloudflare.com
+  install:
+    disk: /dev/vda
