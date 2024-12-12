@@ -20,4 +20,3 @@ spec:
     port: 53
     targetPort: 53
     name: dns
-  loadBalancerIP: 10.10.20.111
