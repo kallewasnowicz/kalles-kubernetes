@@ -10,4 +10,4 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /mnt/kube/adguardhome.new
+    path: /mnt/gluster_global/adguardhome
