@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: homeassistant
+  name: homeassistant
+  labels:
+    app: homeassistant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: homeassistant
+  template:
+    metadata:
+      labels:
+        app: homeassistant
+    spec:
+      containers:
+      - name: homeassistant
+        #image: homeassistant/home-assistant:latest
+        image: kallewasnowicz/kalles-homeassistant-docker:latest
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "512Mi"
+          limits:
+            memory: "1024Mi"
+        ports:
+        - containerPort: 8123
+        volumeMounts:
+        - name: homeassistant-data
+          mountPath: /config
+        securityContext:
+          privileged: true
+          capabilities:
+            add:
+              - NET_ADMIN
+              - NET_RAW
+              - SYS_ADMIN
+      hostNetwork: true
+      volumes:
+      - name: homeassistant-data
+        persistentVolumeClaim:
+          claimName: homeassistant-pvc

@@ -10,5 +10,5 @@ spec:
     kind: ClusterIssuer
   commonName: '*.wnsrt.de'
   dnsNames:
-  - "wnsrt.de"
+  #- "wnsrt.de"
   - "*.wnsrt.de"
