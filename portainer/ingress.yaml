@@ -9,10 +9,10 @@ metadata:
     #nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - "portainer.wnsrt.de"
-      secretName: wnsrt
+  #tls:
+  #  - hosts:
+  #      - "portainer.wnsrt.de"
+  #    secretName: wnsrt
   rules:
     - host: portainer.wnsrt.de
       http:
