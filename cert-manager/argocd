@@ -14,7 +14,7 @@ spec:
     targetRevision: '*'
     helm:
       parameters:
-        - name: installCRDs
+        - name: crds.enabled
           value: "true"
         - name: extraArgs
           value: "{--dns01-recursive-nameservers-only,--dns01-recursive-nameservers=1.1.1.1:53}"
