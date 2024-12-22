@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: portainer
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://portainer.github.io/k8s/
+    targetRevision: '*'
+    helm:
+      parameters:
+        - name: ingress.enabled
+          value: 'true'
+        - name: ingress.hosts[0].host
+          value: portainer.wnsrt.de
+        - name: ingress.ingressClassName
+          value: nginx
+    chart: portainer
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: portainer
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
