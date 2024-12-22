@@ -23,5 +23,5 @@ spec:
                 name: http
   tls:
   - hosts:
-    - "*.wnsrt.de"
-    secretName: wnsrt
+    - "argocd.wnsrt.de"
+    secretName: argocd
