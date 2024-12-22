@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: adguard-nginx
-  namespace: adguard
+  namespace: argocd
   annotations:
     #nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     #nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
