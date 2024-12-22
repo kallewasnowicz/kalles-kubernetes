@@ -11,7 +11,7 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - "adguardhome.wnsrt.de"
+        - "*.wnsrt.de"
       secretName: wnsrt
 
   rules:
