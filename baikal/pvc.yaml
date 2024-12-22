@@ -10,6 +10,7 @@ spec:
     requests:
       storage: 1Gi
   volumeName: baikal-config-pv
+  storageClassName: ""
 
 ---
 apiVersion: v1
@@ -24,3 +25,4 @@ spec:
     requests:
       storage: 1Gi
   volumeName: baikal-data-pv
+  storageClassName: ""
