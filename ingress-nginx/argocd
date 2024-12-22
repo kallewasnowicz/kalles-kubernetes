@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ingress-nginx-helm
+  name: ingress-nginx
   namespace: argocd
 spec:
   destination:
@@ -13,6 +13,14 @@ spec:
     repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: '*'
     chart: ingress-nginx
+    helm:
+      parameters:
+        - name: controller.config.hsts
+          value: "false"
+        - name: controller.config.hsts-include-subdomains
+          value: "false"
+        - name: hsts-preload
+          value: "false"
   sources: []
   project: default
   syncPolicy:
