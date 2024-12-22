@@ -13,20 +13,20 @@ spec:
     repoURL: https://portainer.github.io/k8s/
     targetRevision: '*'
     chart: portainer
-    helm:
-      parameters:
-        - name: ingress.enabled
-          value: 'true'
-        - name: ingress.ingressClassName
-          value: nginx
-        - name: ingress.hosts[0].host
-          value: portainer.wnsrt.de
-        - name: ingress.hosts[0].paths[0].path
-          value: /
-        - name: ingress.hosts[0].paths[0].pathType
-          value: Prefix
-        - name: service.type
-          value: ClusterIP
+#    helm:
+#      parameters:
+#        - name: ingress.enabled
+#          value: 'true'
+#        - name: ingress.ingressClassName
+#          value: nginx
+#        - name: ingress.hosts[0].host
+#          value: portainer.wnsrt.de
+#        - name: ingress.hosts[0].paths[0].path
+#          value: /
+#        - name: ingress.hosts[0].paths[0].pathType
+#          value: Prefix
+#        - name: service.type
+#          value: ClusterIP
   sources: []
   project: default
   syncPolicy:
