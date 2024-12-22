@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: default
+    namespace: cert-manager
     server: https://kubernetes.default.svc
   source:
     repoURL: https://charts.jetstack.io
