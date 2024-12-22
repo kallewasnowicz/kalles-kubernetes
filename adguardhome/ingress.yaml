@@ -9,11 +9,11 @@ metadata:
     cert-manager.io/cluster-issuer: wnsrt
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - "adguardhome.wnsrt.de"
-      secretName: wnsrt
-
+  #tls:
+  #  - hosts:
+  #      - "adguardhome.wnsrt.de"
+  #    secretName: wnsrt
+  #
   rules:
     - host: adguardhome.wnsrt.de
       http:
