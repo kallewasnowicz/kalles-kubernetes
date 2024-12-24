@@ -69,7 +69,7 @@ spec:
       volumes:
         - name: seafile-data
           persistentVolumeClaim:
-            claimName: seafile-data
+            claimName: seafile-data-pvc
       restartPolicy: Always
       # to get image from protected repository
       #imagePullSecrets:
