@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: seahub-custom-pv
+  name: seafile-data
   namespace: seafile
 spec:
   capacity:
-    storage: 100Mi
+    storage: 10Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   hostPath:
-    path: /mnt/gluster/global/seafile/custom
+    path: /mnt/gluster/global/seafile/data
