@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: seafile-mariadb-pv
+  name: seafile-mariadb-pvc
   namespace: seafile
 spec:
   accessModes:
