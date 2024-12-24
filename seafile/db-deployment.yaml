@@ -41,8 +41,6 @@ spec:
             - name: MYSQL_LOG_CONSOLE
               value: "true"
             - name: MYSQL_ROOT_PASSWORD
-              value: db_dev
-            - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mariadb-secret
