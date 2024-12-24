@@ -6,6 +6,8 @@ metadata:
   annotations:
     #nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     #nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/proxy-body-size: "2048m"
+    nginx.org/client-max-body-size: "2048m"
     cert-manager.io/cluster-issuer: wnsrt
 spec:
   ingressClassName: nginx
