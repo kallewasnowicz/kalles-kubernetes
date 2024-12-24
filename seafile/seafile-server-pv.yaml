@@ -4,7 +4,6 @@ metadata:
   name: seafile-data-pv
   namespace: seafile
 spec:
-  storageClassName: manual
   capacity:
     storage: 1Gi
   accessModes:

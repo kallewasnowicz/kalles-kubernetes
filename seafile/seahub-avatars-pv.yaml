@@ -4,7 +4,6 @@ metadata:
   name: seahub-avatars-pv
   namespace: seafile
 spec:
-  storageClassName: manual
   capacity:
     storage: 100Mi
   accessModes:
