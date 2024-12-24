@@ -40,7 +40,7 @@ spec:
             - name: TIME_ZONE
               valueFrom:
                 secretKeyRef:
-                  name: mariadb-secret
+                  name: seafile-secret
                   key: TIME_ZONE
             - name: SEAFILE_ADMIN_EMAIL
               valueFrom:
@@ -72,5 +72,5 @@ spec:
             claimName: seafile-data
       restartPolicy: Always
       # to get image from protected repository
-      imagePullSecrets:
-        - name: regcred
+      #imagePullSecrets:
+      #  - name: regcred
