@@ -47,7 +47,7 @@ spec:
               value: seafile.wnsrt.de
             - name: TIME_ZONE
               value: Europe/Berlin
-          image: ggogel/seafile-server:11.0.12
+          image: ggogel/seafile-server:latest
           name: seafile-server
           ports:
             - containerPort: 8001
