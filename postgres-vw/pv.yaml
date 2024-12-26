@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: postgres-volume
-  namespace: postgres
+  name: vaultwarden-postgres-volume
+  namespace: vaultwarden
   labels:
     type: local
     app: postgres
 spec:
-  storageClassName: manual
+  storageClassName: ""
   capacity:
     storage: 10Gi
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: /mnt/gluster/global/postgresql
+    path: /mnt/gluster/global/vaultwarden/db
