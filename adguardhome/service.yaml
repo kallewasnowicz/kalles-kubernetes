@@ -20,3 +20,8 @@ spec:
     port: 53
     targetPort: 53
     name: dns
+  - protocol: TCP
+    port: 853
+    targetPort: 853
+    name: tlsdns
+  loadBalancerIP: 10.10.30.101

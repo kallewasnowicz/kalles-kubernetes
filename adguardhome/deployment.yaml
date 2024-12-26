@@ -25,6 +25,9 @@ spec:
         - containerPort: 80
           name: http
           protocol: TCP
+        - containerPort: 853
+          name: tlsdns
+          protocol: TCP
         volumeMounts:
         - name: adguard-data
           mountPath: /opt/adguardhome
