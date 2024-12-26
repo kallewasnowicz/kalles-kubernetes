@@ -20,17 +20,17 @@ spec:
         - containerPort: 80
         volumeMounts:
         - mountPath: /data
-          name: vaultwarden-data
+          name: data
         env:
         - name: WEBSOCKET_ENABLED
           value: "true"
         - name: ADMIN_TOKEN
           valueFrom:
             secretKeyRef:
-              name: vaultwarden-admin-token
+              name: admin-token
               key: admin-token
       volumes:
-      - name: vaultwarden-data
+      - name: data
         persistentVolumeClaim:
-          claimName: vaultwarden-data
+          claimName: data
 
