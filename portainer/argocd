@@ -13,8 +13,8 @@ spec:
     repoURL: https://portainer.github.io/k8s/
     targetRevision: '*'
     chart: portainer
-#    helm:
-#      parameters:
+    helm:
+      parameters:
 #        - name: ingress.enabled
 #          value: 'true'
 #        - name: ingress.ingressClassName
@@ -25,8 +25,10 @@ spec:
 #          value: /
 #        - name: ingress.hosts[0].paths[0].pathType
 #          value: Prefix
-#        - name: service.type
-#          value: ClusterIP
+        - name: service.type
+          value: ClusterIP
+        - name: enterpriseEdition.enabled
+          value: 'true'
   sources: []
   project: default
   syncPolicy:
