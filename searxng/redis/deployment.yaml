@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: redis
+      app: searxng-redis
   template:
     metadata:
       labels:
-        app: redis
+        app: searxng-redis
     spec:
       containers:
-      - name: redis
+      - name: searxng-redis
         image: redis:latest
         ports:
         - containerPort: 6379
