@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: baikal-deployment
   namespace: baikal
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: ckulka/baikal
+    argocd-image-updater.argoproj.io/update-strategy: latest
+    argocd-image-updater.argoproj.io/tag: nginx
 spec:
   replicas: 1
   selector:

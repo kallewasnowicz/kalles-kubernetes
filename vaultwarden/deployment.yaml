@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: vaultwarden
   namespace: vaultwarden
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: vaultwarden/server
+    argocd-image-updater.argoproj.io/update-strategy: latest
+
 spec:
   replicas: 1
   selector:

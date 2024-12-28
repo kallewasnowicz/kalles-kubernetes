@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: redis
   namespace: searxng
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: redis
+    argocd-image-updater.argoproj.io/update-strategy: latest
 spec:
   replicas: 1
   selector:

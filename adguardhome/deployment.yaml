@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: adguard-deployment
   namespace: adguard
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: adguard/adguardhome
+    argocd-image-updater.argoproj.io/update-strategy: latest
+    argocd-image-updater.argoproj.io/tag: edge
 spec:
   replicas: 1
   selector:
