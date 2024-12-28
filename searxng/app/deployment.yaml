@@ -17,7 +17,7 @@ spec:
       - name: searxng
         image: searxng/searxng:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8888
         volumeMounts:
         - name: searxng-data
           mountPath: /etc/searxng
