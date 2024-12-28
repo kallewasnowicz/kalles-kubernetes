@@ -5,7 +5,7 @@ metadata:
   namespace: searxng
 spec:
   selector:
-    app: redis
+    app: searxng-redis
   ports:
   - protocol: TCP
     port: 6379
