@@ -19,6 +19,7 @@ spec:
           #        image: seafileltd/seafile-mc:11.0-latest
           # seafile-pro-mc:11.0-latest
           image: seafileltd/seafile-mc:11.0.13-arm
+          imagePullPolicy: Always
           env:
             #- name: DB_ROOT_PASSWD
             #  value: "db_dev" #db's password

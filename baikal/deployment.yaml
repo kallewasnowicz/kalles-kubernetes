@@ -16,6 +16,7 @@ spec:
       containers:
         - name: baikal
           image: ckulka/baikal:nginx
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           volumeMounts:

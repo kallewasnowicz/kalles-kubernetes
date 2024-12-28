@@ -16,5 +16,6 @@ spec:
       containers:
       - name: searxng-redis
         image: redis:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 6379

@@ -16,6 +16,7 @@ spec:
       containers:
       - name: searxng
         image: searxng/searxng:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         volumeMounts:

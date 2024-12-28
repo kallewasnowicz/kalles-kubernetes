@@ -16,6 +16,7 @@ spec:
       containers:
       - name: adguard-home
         image: adguard/adguardhome:edge
+        imagePullPolicy: Always
         ports:
         - containerPort: 53
           name: dns
