@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ha-connectlife-addon
-  namespace: ha-connectlife-addon
+  name: connectlife-api-connector
+  namespace: connectlife-api-connector
   labels:
-    app: ha-connectlife-addon
+    app: connectlife-api-connector
   annotations:
     argocd-image-updater.argoproj.io/image-list: kallewasnowicz/connectlife-api-connector
     argocd-image-updater.argoproj.io/update-strategy: latest
@@ -13,14 +13,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ha-connectlife-addon
+      app: connectlife-api-connector
   template:
     metadata:
       labels:
-        app: ha-connectlife-addon
+        app: connectlife-api-connector
     spec:
       containers:
-      - name: ha-connectlife-addon
+      - name: connectlife-api-connector
         image: kallewasnowicz/connectlife-api-connector:latest
         imagePullPolicy: Always
         ports:
