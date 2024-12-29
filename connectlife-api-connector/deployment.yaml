@@ -8,7 +8,6 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: kallewasnowicz/connectlife-api-connector
     argocd-image-updater.argoproj.io/update-strategy: latest
-    argocd-image-updater.argoproj.io/tag: edge
 spec:
   replicas: 1
   selector:
