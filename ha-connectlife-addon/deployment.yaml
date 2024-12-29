@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: ha-connectlife-addon
-        image: ha-connectlife-addon
+        image: kallewasnowicz/connectlife-api-connector:latest
         ports:
         - containerPort: 8000
         env:
