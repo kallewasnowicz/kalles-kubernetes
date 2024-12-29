@@ -5,6 +5,10 @@ metadata:
   namespace: ha-connectlife-addon
   labels:
     app: ha-connectlife-addon
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: kallewasnowicz/connectlife-api-connector
+    argocd-image-updater.argoproj.io/update-strategy: latest
+    argocd-image-updater.argoproj.io/tag: edge
 spec:
   replicas: 1
   selector:
@@ -18,6 +22,7 @@ spec:
       containers:
       - name: ha-connectlife-addon
         image: kallewasnowicz/connectlife-api-connector:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
         env:
