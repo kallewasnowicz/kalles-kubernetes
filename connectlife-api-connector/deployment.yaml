@@ -26,17 +26,32 @@ spec:
         - containerPort: 8000
         env:
         - name: CONNECTLIFE_LOGIN
-          value: "kai+connectlife@wnsrt.de"
+          valueFrom:
+            secretKeyRef:
+              name: connectlife-api-connector-secret
+              key: CONNECTLIFE_LOGIN
         - name: CONNECTLIFE_PASSWORD
-          value: "QERjklConn++0623@"
+          valueFrom:
+            secretKeyRef:
+              name: connectlife-api-connector-secret
+              key: CONNECTLIFE_PASSWORD
         - name: LOG_LEVEL
           value: "info"
         - name: MQTT_HOST
-          value: "192.168.178.101"
+          valueFrom:
+            secretKeyRef:
+              name: connectlife-api-connector-secret
+              key: MQTT_HOST
         - name: MQTT_USER
-          value: "homeassistant"
+          valueFrom:
+            secretKeyRef:
+              name: connectlife-api-connector-secret
+              key: MQTT_USER
         - name: MQTT_PASSWORD
-          value: "homeassistant"
+          valueFrom:
+            secretKeyRef:
+              name: connectlife-api-connector-secret
+              key: MQTT_PASSWORD
         - name: MQTT_PORT
           value: "1883"
         - name: MQTT_SSL
