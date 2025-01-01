@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: connectlife-api-connector
-  namespace: connectlife-api-connector
+  namespace: mosquitto
 spec:
   selector:
     app: connectlife-api-connector

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: connectlife-api-connector
-  namespace: connectlife-api-connector
+  namespace: mosquitto
   labels:
     app: connectlife-api-connector
   annotations:
