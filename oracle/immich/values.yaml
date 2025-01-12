@@ -1,0 +1,16 @@
+persistence:
+  enabled: true
+  existingClaim: immich-pvc
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: immich.wnsrt.de
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+        - immich.wnsrt.de
+      secretName: immich

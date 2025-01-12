@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: baikal-config-pv
+  namespace: baikal
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/gluster/global/baikal/config
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: baikal-data-pv
+  namespace: baikal
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/gluster/global/baikal/data
